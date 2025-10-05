@@ -1,0 +1,148 @@
+{
+  "training_results": {
+    "method": "simple_training",
+    "train_metrics": {
+      "classification_report": {
+        "CANDIDATE": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 14.0
+        },
+        "CONFIRMED": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 141.0
+        },
+        "FALSE POSITIVE": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 41.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 196.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 196.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          14,
+          0,
+          0
+        ],
+        [
+          0,
+          141,
+          0
+        ],
+        [
+          0,
+          0,
+          41
+        ]
+      ],
+      "classes": [
+        "CANDIDATE",
+        "CONFIRMED",
+        "FALSE POSITIVE"
+      ],
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "roc_auc_ovr": 1.0,
+      "macro_average_precision": 1.0
+    },
+    "bias_factors": {
+      "CANDIDATE": 1.0,
+      "CONFIRMED": 0.7,
+      "FALSE POSITIVE": 1.25
+    }
+  },
+  "eval_metrics": {
+    "classification_report": {
+      "CANDIDATE": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 14.0
+      },
+      "CONFIRMED": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 141.0
+      },
+      "FALSE POSITIVE": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 41.0
+      },
+      "accuracy": 1.0,
+      "macro avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 196.0
+      },
+      "weighted avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 196.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        14,
+        0,
+        0
+      ],
+      [
+        0,
+        141,
+        0
+      ],
+      [
+        0,
+        0,
+        41
+      ]
+    ],
+    "classes": [
+      "CANDIDATE",
+      "CONFIRMED",
+      "FALSE POSITIVE"
+    ],
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "weighted_f1": 1.0,
+    "roc_auc_ovr": 1.0,
+    "macro_average_precision": 1.0
+  },
+  "data_path": "C:\\Users\\GTX\\Desktop\\web_app_vechi\\Nasa_Space_APPs_Atomic_Bots-cb2e0d3fb23045b9866ef3a23501f1dd6110337e\\exoplanet-ai\\models\\_tmp_train_0_171813_344268.csv",
+  "n_samples": 196,
+  "n_features": 16,
+  "classes": {
+    "CONFIRMED": 141,
+    "FALSE POSITIVE": 41,
+    "CANDIDATE": 14
+  },
+  "model_type": "xgboost",
+  "bias_factors": {
+    "0": 1.0,
+    "1": 0.7,
+    "2": 1.25
+  }
+}

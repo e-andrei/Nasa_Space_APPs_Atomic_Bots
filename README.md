@@ -1,145 +1,145 @@
-# 🚀 Exoplanet AI - Clasificator Multi-Format Inteligent
+# 🚀 Exoplanet AI - Intelligent Multi-Format Classifier
 
-**Aplicație web avansată pentru clasificarea exoplanetelor cu suport pentru multiple formate de date astronomice - totul într-o interfață Streamlit integrată!**
+**Advanced web application for exoplanet classification with support for multiple astronomical data formats - all in an integrated Streamlit interface!**
 
-## ✨ Funcționalități Principale
+## ✨ Main Features
 
-### 🎯 Clasificator Multi-Format Avansat
-- **� Suport pentru multiple formate** - Kepler (KOI), K2/PANDC, TOI (TESS), Exoplanet Archive
-- **🧠 Modele pre-antrenate** - XGBoost și Random Forest optimizate pentru diferite tipuri de date
-- **� Mapare automată de coloane** - Recunoaște automat formatele și mapează coloanele corespunzător
-- **� Analiză avansată** - Feature importance, threshold explorer, analiză de distribuție
+### 🎯 Advanced Multi-Format Classifier
+- **📊 Support for multiple formats** - Kepler (KOI), K2/PANDC, TOI (TESS), Exoplanet Archive
+- **🧠 Pre-trained models** - XGBoost and Random Forest optimized for different data types
+- **🔄 Automatic column mapping** - Automatically recognizes formats and maps corresponding columns
+- **📈 Advanced analysis** - Feature importance, threshold explorer, distribution analysis
 
-### 🛠️ Interfață Completă cu 7 Tab-uri
-- **� Upload CSV** - Încarcă și procesează fișiere de date astronomice
-- **✍️ Manual Input** - Introducere manuală de valori pentru predicții rapide  
-- **📊 Model Info** - Informații detaliate despre modelul curent și metrici
-- **🔍 Feature Importance** - Analiză importanței caracteristicilor cu vizualizări
-- **⚖️ Threshold Explorer** - Explorează și optimizează pragurile de clasificare
-- **🧪 Advanced Analysis** - Analize statistice avansate și distribuții de clase
-- **🚀 Retrain** - Antrenează modele noi pe datele tale cu hiperparametri optimizați
+### 🛠️ Complete Interface with 7 Tabs
+- **📂 Upload CSV** - Upload and process astronomical data files
+- **✍️ Manual Input** - Manual value entry for quick predictions  
+- **📊 Model Info** - Detailed information about current model and metrics
+- **🔍 Feature Importance** - Feature importance analysis with visualizations
+- **⚖️ Threshold Explorer** - Explore and optimize classification thresholds
+- **🧪 Advanced Analysis** - Advanced statistical analysis and class distributions
+- **🚀 Retrain** - Train new models on your data with optimized hyperparameters
 
-## 📦 Instalare Rapidă
+## 📦 Quick Installation
 
 ```bash
-# 1. Clonează repository-ul
+# 1. Clone the repository
 git clone https://github.com/e-andrei/Nasa_Space_APPs_Atomic_Bots.git
 cd Nasa_Space_APPs_Atomic_Bots/exoplanet-ai
 
-# 2. Instalează dependențele
+# 2. Install dependencies
 pip install -r ../requirements.txt
 
-# 3. Pornește aplicația
+# 3. Start the application
 streamlit run app/streamlit_app.py
 ```
 
-Aplicația se va deschide în browser la `http://localhost:8501`
+The application will open in browser at `http://localhost:8501`
 
-## 🎮 Cum să Folosești
+## 🎮 How to Use
 
-### 1️⃣ Selecția Modelului
+### 1️⃣ Model Selection
 
 **🤖 Sidebar - Model Selection**
-- **Alege din modelele disponibile** - Lista completă de modele .joblib din directorul `models/`
-- **Introdu path-ul manual** - Pentru modele custom sau locații specifice
-- **Informații despre model** - Metrici, numărul de samples, caracteristici folosite
-- **Lista de caracteristici** - Vezi exact ce features așteaptă modelul
+- **Choose from available models** - Complete list of .joblib models from `models/` directory
+- **Enter path manually** - For custom models or specific locations
+- **Model information** - Metrics, number of samples, features used
+- **Feature list** - See exactly what features the model expects
 
-**Modele Disponibile:**
-- `unified_xgb_tuned.joblib` - XGBoost optimizat (recomandat)
-- `unified_rf_tuned.joblib` - Random Forest optimizat  
-- `multi_toi_classifier.joblib` - Specialist pentru date TOI
-- `exoplanet_classifier_*.joblib` - Modele recent antrenate
+**Available Models:**
+- `unified_xgb_tuned.joblib` - Optimized XGBoost (recommended)
+- `unified_rf_tuned.joblib` - Optimized Random Forest  
+- `multi_toi_classifier.joblib` - TOI data specialist
+- `exoplanet_classifier_*.joblib` - Recently trained models
 
-### 2️⃣ Upload CSV - Procesare Automată
+### 2️⃣ Upload CSV - Automatic Processing
 
-**� Tab: Upload CSV**
+**📂 Tab: Upload CSV**
 ```
-• Drag & drop sau Browse pentru fișierul CSV
-• Suport pentru comentarii (linii care încep cu #)
-• Mapare automată de coloane pentru formate Kepler, K2, TOI
-• Preview al datelor încărcate cu validare
-• Predicții în batch cu probabilități complete
-• Export rezultate ca CSV
+• Drag & drop or Browse for CSV file
+• Support for comments (lines starting with #)
+• Automatic column mapping for Kepler, K2, TOI formats
+• Preview loaded data with validation
+• Batch predictions with complete probabilities
+• Export results as CSV
 ```
 
-**Formate Suportate:**
+**Supported Formats:**
 - **Kepler KOI**: `koi_period`, `koi_depth`, `koi_prad`, etc.
 - **K2/PANDC**: `pl_orbper`, `pl_rade`, `st_teff`, etc.  
-- **TOI (TESS)**: `tfopwg_*` coloane
-- **Mixed formats**: Mapare inteligentă pentru combinații
+- **TOI (TESS)**: `tfopwg_*` columns
+- **Mixed formats**: Smart mapping for combinations
 
-### 3️⃣ Manual Input - Predicții Rapide
+### 3️⃣ Manual Input - Quick Predictions
 
 **✍️ Tab: Manual Input**
 ```
-• Formulare interactive pentru fiecare caracteristică
-• Validare în timp real a valorilor
-• Predicții instantanee cu probabilități per clasă
-• Ideal pentru testare rapidă și explorare
+• Interactive forms for each feature
+• Real-time value validation
+• Instant predictions with per-class probabilities
+• Ideal for quick testing and exploration
 ```
 
-### 4️⃣ Model Info - Transparență Completă
+### 4️⃣ Model Info - Complete Transparency
 
 **📊 Tab: Model Info**
 ```
-• Tipul modelului și arhitectura
-• Metrici de performanță (accuracy, F1-score, ROC-AUC)
-• Distribuția claselor în datele de antrenare
-• Hyperparameters folosiți
-• Metadata despre procesul de antrenare
+• Model type and architecture
+• Performance metrics (accuracy, F1-score, ROC-AUC)
+• Class distribution in training data
+• Hyperparameters used
+• Metadata about training process
 ```
 
-### 5️⃣ Feature Importance - Înțelege Modelul
+### 5️⃣ Feature Importance - Understand the Model
 
 **🔍 Tab: Feature Importance**
 ```
-• Grafice interactive cu importanța fiecărei caracteristici
-• Permutation importance pentru validare
-• Comparații între diferite tipuri de importanță
-• Export grafice și date pentru analize ulterioare
+• Interactive charts with each feature's importance
+• Permutation importance for validation
+• Comparisons between different importance types
+• Export charts and data for further analysis
 ```
 
-### 6️⃣ Threshold Explorer - Optimizează Clasificarea
+### 6️⃣ Threshold Explorer - Optimize Classification
 
 **⚖️ Tab: Threshold Explorer**
 ```
-• Slider interactive pentru ajustarea pragurilor
-• Metrici în timp real (precision, recall, F1)
-• Matrice de confuzie dinamice
-• ROC curves și precision-recall curves
-• Optimizare pentru cazuri de utilizare specifice
+• Interactive sliders for threshold adjustment
+• Real-time metrics (precision, recall, F1)
+• Dynamic confusion matrices
+• ROC curves and precision-recall curves
+• Optimization for specific use cases
 ```
 
-### 7️⃣ Advanced Analysis - Analize Statistice
+### 7️⃣ Advanced Analysis - Statistical Analysis
 
 **🧪 Tab: Advanced Analysis**
 ```
-• Distribuții de probabilități per clasă
-• Statistici descriptive detaliate
-• Analize de corelație între features
-• Grafice de distribuție și histograme
-• Detectarea outliers și anomaliilor
+• Probability distributions per class
+• Detailed descriptive statistics
+• Correlation analysis between features
+• Distribution plots and histograms
+• Outlier and anomaly detection
 ```
 
-### 8️⃣ Retrain - Antrenează Modele Noi
+### 8️⃣ Retrain - Train New Models
 
 **🚀 Tab: Retrain**
 ```
-• Upload multiple fișiere CSV pentru antrenare
-• Alegerea tipului de model (XGBoost/Random Forest)
-• Hyperparameter tuning automată (opțional)
-• Greutăți custom pentru clase (class balancing)
-• Cross-validation configurabilă
-• Export automat al modelului antrenat
-• Reload automat cu noul model
+• Upload multiple CSV files for training
+• Choose model type (XGBoost/Random Forest)
+• Automatic hyperparameter tuning (optional)
+• Custom weights for classes (class balancing)
+• Configurable cross-validation
+• Automatic export of trained model
+• Auto-reload with new model
 ```
 
-## 📊 Formate de Date Suportate
+## 📊 Supported Data Formats
 
-### 🔄 Mapare Automată de Coloane
+### 🔄 Automatic Column Mapping
 
-Aplicația recunoaște automat și mapează coloanele din diferite formate astronomice:
+The application automatically recognizes and maps columns from different astronomical formats:
 
 **🌟 Kepler KOI Format:**
 ```csv
@@ -161,38 +161,38 @@ tfopwg_period,tfopwg_depth,tfopwg_duration,tfopwg_rprs,tfopwg_prad,tfopwg_teq,tf
 pl_orbper,pl_rade,pl_tranmid,st_teff,st_rad,st_logg,pl_bmasse
 ```
 
-### 🎯 Caracteristici Mapate Automat
+### 🎯 Automatically Mapped Features
 
-| Caracteristică | Kepler | K2/PANDC | TOI | Archive |
-|---------------|---------|----------|-----|---------|
-| **Perioada orbitală** | `koi_period` | `pl_orbper` | `tfopwg_period` | `pl_orbper` |
-| **Adâncimea tranzitului** | `koi_depth` | *calculată* | `tfopwg_depth` | *calculată* |
-| **Durata tranzitului** | `koi_duration` | `pl_trandur` | `tfopwg_duration` | `pl_trandur` |
-| **Raza planetei** | `koi_prad` | `pl_rade` | `tfopwg_prad` | `pl_rade` |
-| **Temperatura echilibru** | `koi_teq` | `pl_eqt` | `tfopwg_teq` | `pl_eqt` |
-| **Temperatura stelară** | `koi_steff` | `st_teff` | `st_teff` | `st_teff` |
-| **Raza stelară** | `koi_srad` | `st_rad` | `st_rad` | `st_rad` |
+| Feature | Kepler | K2/PANDC | TOI | Archive |
+|---------|---------|----------|-----|---------|
+| **Orbital period** | `koi_period` | `pl_orbper` | `tfopwg_period` | `pl_orbper` |
+| **Transit depth** | `koi_depth` | *calculated* | `tfopwg_depth` | *calculated* |
+| **Transit duration** | `koi_duration` | `pl_trandur` | `tfopwg_duration` | `pl_trandur` |
+| **Planet radius** | `koi_prad` | `pl_rade` | `tfopwg_prad` | `pl_rade` |
+| **Equilibrium temperature** | `koi_teq` | `pl_eqt` | `tfopwg_teq` | `pl_eqt` |
+| **Stellar temperature** | `koi_steff` | `st_teff` | `st_teff` | `st_teff` |
+| **Stellar radius** | `koi_srad` | `st_rad` | `st_rad` | `st_rad` |
 
-### 🏷️ Etichete pentru Antrenare
+### 🏷️ Labels for Training
 
-**Coloane acceptate pentru target:**
+**Accepted columns for target:**
 - `disposition`, `koi_disposition`, `tfopwg_disp`, `pl_disposition`
 
-**Valori acceptate:**
+**Accepted values:**
 - **CONFIRMED**: `CONFIRMED`, `CP`, `KP`, `Confirmed Planet`
 - **CANDIDATE**: `CANDIDATE`, `PC`, `APC`, `Planet Candidate`  
 - **FALSE POSITIVE**: `FALSE POSITIVE`, `FP`, `FA`, `False Alarm`
 
-### 📝 Exemple de Fișiere CSV
+### 📝 CSV File Examples
 
-**Pentru Predicții (orice format):**
+**For Predictions (any format):**
 ```csv
 koi_period,koi_depth,koi_prad,koi_teq,koi_steff
 365.25,100.5,1.2,288,5778
 582.7,85.2,0.8,190,4850
 ```
 
-**Pentru Antrenare cu etichete:**
+**For Training with labels:**
 ```csv
 koi_period,koi_depth,koi_prad,koi_teq,koi_steff,koi_disposition
 365.25,100.5,1.2,288,5778,CONFIRMED
@@ -200,60 +200,60 @@ koi_period,koi_depth,koi_prad,koi_teq,koi_steff,koi_disposition
 127.3,210.8,2.1,450,6200,CANDIDATE
 ```
 
-## 🔧 Caracteristici Avansate
+## 🔧 Advanced Features
 
-### 🧠 Mapare Inteligentă de Coloane
-- **Auto-detecție format** - Kepler, K2/PANDC, TOI, Exoplanet Archive
-- **Mapare flexibilă** - Găsește automat echivalentele pentru fiecare caracteristică
-- **Suport pentru formate mixte** - Procesează fișiere cu combinații de coloane
-- **Validare automată** - Verifică consistența și calitatea datelor
+### 🧠 Smart Column Mapping
+- **Auto-format detection** - Kepler, K2/PANDC, TOI, Exoplanet Archive
+- **Flexible mapping** - Automatically finds equivalents for each feature
+- **Mixed format support** - Processes files with column combinations
+- **Automatic validation** - Checks data consistency and quality
 
-### ⚙️ Feature Engineering Automată
-- **Transit depth calculat** - Din raza planetei și raza stelară când lipsește
-- **Normalizare inteligentă** - Scalare automată pentru fiecare tip de caracteristică  
-- **Gestionarea valorilor lipsă** - Strategii adaptive pentru missing values
-- **Outlier detection** - Identificare automată a valorilor extreme
+### ⚙️ Automatic Feature Engineering
+- **Calculated transit depth** - From planet and stellar radius when missing
+- **Smart normalization** - Automatic scaling for each feature type  
+- **Missing value handling** - Adaptive strategies for missing values
+- **Outlier detection** - Automatic identification of extreme values
 
-### 🚀 Modele și Optimizare
-- **Hyperparameter tuning** - RandomizedSearchCV cu parametri optimizați
-- **Cross-validation** - K-fold configurabil pentru validare robustă
-- **Class balancing** - Greutăți adaptive pentru clase dezbalansate
-- **Multi-algoritmi** - XGBoost, Random Forest cu configurări specifice
+### 🚀 Models and Optimization
+- **Hyperparameter tuning** - RandomizedSearchCV with optimized parameters
+- **Cross-validation** - Configurable K-fold for robust validation
+- **Class balancing** - Adaptive weights for imbalanced classes
+- **Multi-algorithms** - XGBoost, Random Forest with specific configurations
 
-### 📈 Analize și Vizualizări
-- **Feature importance** - Multiple metrici (Gini, permutation, SHAP)
-- **Threshold optimization** - Curves ROC, Precision-Recall interactive
-- **Performance metrics** - Suite completă de metrici de clasificare
-- **Interactive plots** - Grafice Plotly interactive pentru explorare
+### 📈 Analysis and Visualizations
+- **Feature importance** - Multiple metrics (Gini, permutation, SHAP)
+- **Threshold optimization** - Interactive ROC, Precision-Recall curves
+- **Performance metrics** - Complete suite of classification metrics
+- **Interactive plots** - Interactive Plotly charts for exploration
 
-### 🔄 Deployment și Robustețe
-- **Path resolution robustă** - Funcționează în orice mediu (local, cloud)
-- **Error handling avansat** - Mesaje clare și recuperare gracioasă
-- **Memory management** - Optimizat pentru fișiere mari
-- **Multi-format support** - CSV cu comentarii, encodings diferite
+### 🔄 Deployment and Robustness
+- **Robust path resolution** - Works in any environment (local, cloud)
+- **Advanced error handling** - Clear messages and graceful recovery
+- **Memory management** - Optimized for large files
+- **Multi-format support** - CSV with comments, different encodings
 
-## 📈 Modelele Incluse
+## 📈 Included Models
 
-Aplicația vine cu o colecție de modele pre-antrenate pentru diferite scenarii:
+The application comes with a collection of pre-trained models for different scenarios:
 
-| Model | Descriere | Tip | Accuracy | F1 Score | Specialitate |
-|-------|-----------|-----|----------|----------|--------------|
-| `unified_xgb_tuned.joblib` | XGBoost optimizat multi-dataset | XGBoost | ~94% | ~0.89 | **Recomandat general** |
-| `unified_rf_tuned.joblib` | Random Forest optimizat | RF | ~93% | ~0.87 | Robust, interpretat |
-| `multi_toi_classifier.joblib` | Specialist pentru date TOI/TESS | XGBoost | ~92% | ~0.88 | **TOI exclusive** |
-| `unified_multi_dataset.joblib` | Combinare toate formatele | XGBoost | ~91% | ~0.86 | Multi-format |
-| `exoplanet_classifier_*.joblib` | Modele recent antrenate | Variabil | Variabil | Variabil | Fresh training |
+| Model | Description | Type | Accuracy | F1 Score | Specialty |
+|-------|-------------|------|----------|----------|-----------|
+| `unified_xgb_tuned.joblib` | Optimized XGBoost multi-dataset | XGBoost | ~94% | ~0.89 | **General recommended** |
+| `unified_rf_tuned.joblib` | Optimized Random Forest | RF | ~93% | ~0.87 | Robust, interpretable |
+| `multi_toi_classifier.joblib` | TOI/TESS data specialist | XGBoost | ~92% | ~0.88 | **TOI exclusive** |
+| `unified_multi_dataset.joblib` | Combine all formats | XGBoost | ~91% | ~0.86 | Multi-format |
+| `exoplanet_classifier_*.joblib` | Recently trained models | Variable | Variable | Variable | Fresh training |
 
-### 🏆 Model Recomandat: `unified_xgb_tuned.joblib`
+### 🏆 Recommended Model: `unified_xgb_tuned.joblib`
 
-**De ce este cel mai bun:**
-- ✅ **Antrenat pe date multiple** - Kepler, K2, TOI combinate
-- ✅ **Hyperparametri optimizați** - Tuning extensiv cu RandomizedSearch
-- ✅ **Performanță superioară** - Accuracy 94%+ pe test set
-- ✅ **Robust la diferite formate** - Funcționează excelent pe toate tipurile de date
-- ✅ **Fast prediction** - Optimizat pentru speed și accuracy
+**Why it's the best:**
+- ✅ **Trained on multiple data** - Kepler, K2, TOI combined
+- ✅ **Optimized hyperparameters** - Extensive tuning with RandomizedSearch
+- ✅ **Superior performance** - 94%+ accuracy on test set
+- ✅ **Robust to different formats** - Works excellently on all data types
+- ✅ **Fast prediction** - Optimized for speed and accuracy
 
-### 📊 Metrici de Performanță Detaliate
+### 📊 Detailed Performance Metrics
 
 **Unified XGBoost Tuned:**
 ```
@@ -265,40 +265,40 @@ Precision (macro): 0.88
 Recall (macro): 0.90
 ```
 
-**Distribuția claselor în antrenare:**
+**Class distribution in training:**
 - CONFIRMED: ~45,000 samples
 - FALSE POSITIVE: ~35,000 samples  
 - CANDIDATE: ~12,000 samples
 
-### 🔄 Auto-Loading și Fallback
+### 🔄 Auto-Loading and Fallback
 
-1. **Default loading** - `unified_xgb_tuned.joblib` se încarcă automat
-2. **Fallback intelligent** - Dacă modelul default lipsește, se încarcă primul disponibil
-3. **Error recovery** - Mesaje clare dacă niciun model nu poate fi încărcat
-4. **Model switching** - Schimbare rapidă între modele fără restart
+1. **Default loading** - `unified_xgb_tuned.joblib` loads automatically
+2. **Smart fallback** - If default model is missing, loads first available
+3. **Error recovery** - Clear messages if no model can be loaded
+4. **Model switching** - Quick switching between models without restart
 
-## 🚀 Deployment și Rulare
+## 🚀 Deployment and Running
 
 ### 💻 Local Development
 ```bash
-# Navighează în directorul aplicației
+# Navigate to application directory
 cd exoplanet-ai
 
-# Pornește aplicația
+# Start the application
 streamlit run app/streamlit_app.py
 
-# Aplicația se deschide la: http://localhost:8501
+# Application opens at: http://localhost:8501
 ```
 
 ### ☁️ Cloud Deployment
 
 **Streamlit Cloud:**
 ```yaml
-# Entry point în streamlit dashboard:
+# Entry point in streamlit dashboard:
 app/streamlit_app.py
 
-# Asigură-te că requirements.txt este în root
-# Și că directorul models/ este inclus în deployment
+# Make sure requirements.txt is in root
+# And models/ directory is included in deployment
 ```
 
 **Heroku:**
@@ -318,91 +318,91 @@ EXPOSE 8501
 CMD ["streamlit", "run", "app/streamlit_app.py", "--server.address=0.0.0.0"]
 ```
 
-### ⚙️ Variabile de Mediu (Opționale)
+### ⚙️ Environment Variables (Optional)
 
 ```bash
-# Port customizat
+# Custom port
 STREAMLIT_SERVER_PORT=8501
 
-# Adresa server
+# Server address
 STREAMLIT_SERVER_ADDRESS=0.0.0.0
 
-# Dezactivează file watcher pentru deployment
+# Disable file watcher for deployment
 STREAMLIT_SERVER_FILE_WATCHER_TYPE=none
 ```
 
-### 🔍 Troubleshooting Deployment
+### 🔍 Deployment Troubleshooting
 
-**Problemă: Model nu se încarcă**
+**Issue: Model doesn't load**
 ```
 ❌ Failed to load model: [Errno 2] No such file or directory
 ```
 
-**Soluție:**
-- ✅ Verifică că directorul `models/` este inclus în deployment
-- ✅ Asigură-te că path-ul relativ este corect
-- ✅ Verifică că fișierele .joblib au fost uploadate
+**Solution:**
+- ✅ Verify that `models/` directory is included in deployment
+- ✅ Make sure relative path is correct
+- ✅ Check that .joblib files were uploaded
 
-**Problemă: Import errors în cloud**
+**Issue: Import errors in cloud**
 ```
 ❌ ModuleNotFoundError: No module named 'src.model'
 ```
 
-**Soluție:**
-- ✅ Verifică că directorul `src/` este inclus
-- ✅ Asigură-te că `__init__.py` există în `src/`
-- ✅ Verifică că `requirements.txt` este complet
+**Solution:**
+- ✅ Verify that `src/` directory is included
+- ✅ Make sure `__init__.py` exists in `src/`
+- ✅ Check that `requirements.txt` is complete
 
-## 🛠️ Dezvoltare și Extindere
+## 🛠️ Development and Extension
 
-### 📁 Structura Proiectului
+### 📁 Project Structure
 ```
 Nasa_Space_APPs_Atomic_Bots/
-├── README.md                        # Această documentație
-├── requirements.txt                 # Dependențe Python globale
-└── exoplanet-ai/                   # Aplicația principală
+├── README.md                        # This documentation
+├── requirements.txt                 # Global Python dependencies
+└── exoplanet-ai/                   # Main application
     ├── app/
-    │   └── streamlit_app.py         # Aplicația Streamlit principală (788 linii)
-    ├── src/                         # Module core pentru ML
+    │   └── streamlit_app.py         # Main Streamlit application (788 lines)
+    ├── src/                         # Core ML modules
     │   ├── __init__.py
-    │   ├── data.py                  # Procesare și mapare date
-    │   ├── model.py                 # Clase model și training
-    │   ├── explain.py               # Feature importance și explicabilitate
-    │   └── serve.py                 # Utilități pentru serving
-    ├── models/                      # Modele pre-antrenate (.joblib + .json)
-    │   ├── unified_xgb_tuned.*      # Model principal recomandat
-    │   ├── unified_rf_tuned.*       # Random Forest alternativă
-    │   ├── multi_toi_classifier.*   # Specialist TOI
-    │   └── ...                      # Alte modele
-    ├── data/                        # Dataset-uri de test și demo
-    │   ├── cumulative_*.csv         # Date Kepler
-    │   ├── k2pandc_*.csv           # Date K2/PANDC
-    │   └── TOI_*.csv               # Date TESS TOI
-    ├── notebooks/                   # Jupyter notebooks pentru analiza
+    │   ├── data.py                  # Data processing and mapping
+    │   ├── model.py                 # Model classes and training
+    │   ├── explain.py               # Feature importance and explainability
+    │   └── serve.py                 # Serving utilities
+    ├── models/                      # Pre-trained models (.joblib + .json)
+    │   ├── unified_xgb_tuned.*      # Main recommended model
+    │   ├── unified_rf_tuned.*       # Random Forest alternative
+    │   ├── multi_toi_classifier.*   # TOI specialist
+    │   └── ...                      # Other models
+    ├── data/                        # Test and demo datasets
+    │   ├── cumulative_*.csv         # Kepler data
+    │   ├── k2pandc_*.csv           # K2/PANDC data
+    │   └── TOI_*.csv               # TESS TOI data
+    ├── notebooks/                   # Jupyter notebooks for analysis
     │   └── quickstart_tutorial.ipynb
-    ├── DEPLOYMENT_GUIDE.md         # Ghid tehnic deployment
-    └── *.py                        # Scripts de test și development
+    ├── DEPLOYMENT_GUIDE.md         # Technical deployment guide
+    └── *.py                        # Test and development scripts
 ```
 
-### 🔧 Arhitectura Aplicației
+### 🔧 Application Architecture
 
 **🏗️ Streamlit App Structure:**
-- **Model Selection** (Sidebar) - Management și selecție modele
-- **7 Tab System** - Interfață modulară pentru funcționalități diferite
-- **Robust Path Resolution** - Funcționează în orice mediu de deployment
-- **Smart Error Handling** - Recovery gracioasă și mesaje utile
+- **Model Selection** (Sidebar) - Model management and selection
+- **7 Tab System** - Modular interface for different functionalities
+- **Robust Path Resolution** - Works in any deployment environment
+- **Smart Error Handling** - Graceful recovery and useful messages
 
 **🧠 Core Modules:**
-- **`data.py`** - Mapare multi-format, feature engineering, validare
+- **`data.py`** - Multi-format mapping, feature engineering, validation
 - **`model.py`** - Training, hyperparameter tuning, class balancing  
-- **`explain.py`** - Feature importance, SHAP values, interpretabilitate
+- **`explain.py`** - Feature importance, SHAP values, interpretability
 - **`serve.py`** - Model loading, prediction, deployment utilities
 
-### 🆕 Adăugarea de Funcționalități Noi
+### 🆕 Adding New Features
 
-**Nou Tab în Streamlit:**
+**New Tab in Streamlit:**
 ```python
-# În streamlit_app.py, adaugă în lista de tab-uri:
+# In streamlit_app.py, add to tab list:
 tab_new = st.tabs([...existing..., "New Feature"])
 
 with tab_new:
@@ -410,53 +410,53 @@ with tab_new:
     # Your implementation here
 ```
 
-**Nou Format de Date:**
+**New Data Format:**
 ```python
-# În src/data.py, extinde AUTO_FEATURE_MAP:
+# In src/data.py, extend AUTO_FEATURE_MAP:
 AUTO_FEATURE_MAP = {
     'your_feature': ['new_format_col', 'existing_col'],
     # ...existing mappings...
 }
 ```
 
-**Nou Tip de Model:**
+**New Model Type:**
 ```python
-# În src/model.py, adaugă în train_unified_model():
+# In src/model.py, add to train_unified_model():
 if model_type == 'your_new_model':
     model = YourModelClass(**params)
     param_grid = your_param_grid
 ```
 
-### 🔄 Workflow Development
+### 🔄 Development Workflow
 
-1. **Modifică codul** în `src/` sau `app/`
-2. **Testează local** cu `streamlit run app/streamlit_app.py`
-3. **Validează cu date noi** folosind tab-ul Upload CSV
-4. **Antrenează modele test** cu tab-ul Retrain
-5. **Deploy** folosind ghidul din `DEPLOYMENT_GUIDE.md`
+1. **Modify code** in `src/` or `app/`
+2. **Test locally** with `streamlit run app/streamlit_app.py`
+3. **Validate with new data** using Upload CSV tab
+4. **Train test models** with Retrain tab
+5. **Deploy** using guide in `DEPLOYMENT_GUIDE.md`
 
-### 🧪 Scripts de Test Disponibile
+### 🧪 Available Test Scripts
 
 ```bash
-# În directorul exoplanet-ai/
-python test_accuracy_fix.py          # Test metrici accuracy
-python test_new_accuracy_formula.py  # Test formulă accuracy nouă
-python test_toi_improvements.py      # Test îmbunătățiri TOI
-python test_webapp_training.py       # Test training în webapp
-python test_workflow.py              # Test workflow complet
+# In exoplanet-ai/ directory
+python test_accuracy_fix.py          # Test accuracy metrics
+python test_new_accuracy_formula.py  # Test new accuracy formula
+python test_toi_improvements.py      # Test TOI improvements
+python test_webapp_training.py       # Test webapp training
+python test_workflow.py              # Test complete workflow
 python test_xgb_pickle.py           # Test model persistence
 ```
 
-### 📚 APIs și Interfețe
+### 📚 APIs and Interfaces
 
 **Loading a Model Programmatically:**
 ```python
 from src.model import load_model
 
-# Load model și metadata
+# Load model and metadata
 pipeline, label_encoder, features = load_model('models/unified_xgb_tuned.joblib')
 
-# Predicție
+# Prediction
 predictions = pipeline.predict(your_data)
 probabilities = pipeline.predict_proba(your_data)
 ```
@@ -465,7 +465,7 @@ probabilities = pipeline.predict_proba(your_data)
 ```python
 from src.model import train_unified_model
 
-# Training cu configurație custom
+# Training with custom configuration
 result = train_unified_model(
     file_paths=['data1.csv', 'data2.csv'],
     model_type='xgboost',
@@ -474,164 +474,164 @@ result = train_unified_model(
 )
 ```
 
-## 📚 Documentație și Resurse
+## 📚 Documentation and Resources
 
-### 📖 Documentația Completă
-- **[DEPLOYMENT_GUIDE.md](exoplanet-ai/DEPLOYMENT_GUIDE.md)** - Ghid tehnic de deployment pentru cloud
-- **[notebooks/quickstart_tutorial.ipynb](exoplanet-ai/notebooks/quickstart_tutorial.ipynb)** - Tutorial interactiv Jupyter
-- **[src/](exoplanet-ai/src/)** - Documentație API în docstrings ale modulelor
+### 📖 Complete Documentation
+- **[DEPLOYMENT_GUIDE.md](exoplanet-ai/DEPLOYMENT_GUIDE.md)** - Technical cloud deployment guide
+- **[notebooks/quickstart_tutorial.ipynb](exoplanet-ai/notebooks/quickstart_tutorial.ipynb)** - Interactive Jupyter tutorial
+- **[src/](exoplanet-ai/src/)** - API documentation in module docstrings
 
-### 🎓 Tutorial Rapid
-1. **Pornește aplicația** - `streamlit run app/streamlit_app.py`
-2. **Încarcă un fișier CSV** - Folosește tab-ul "Upload CSV"
-3. **Explorează predicțiile** - Verifică probabilitățile și threshold-urile
-4. **Analizează modelul** - Tab "Feature Importance" și "Model Info"
-5. **Antrenează propriul model** - Tab "Retrain" cu datele tale
+### 🎓 Quick Tutorial
+1. **Start the application** - `streamlit run app/streamlit_app.py`
+2. **Upload a CSV file** - Use "Upload CSV" tab
+3. **Explore predictions** - Check probabilities and thresholds
+4. **Analyze the model** - "Feature Importance" and "Model Info" tabs
+5. **Train your own model** - "Retrain" tab with your data
 
-### 🔗 Exemple de Utilizare
+### 🔗 Usage Examples
 
-**🌟 Clasificare date Kepler:**
+**🌟 Kepler data classification:**
 ```bash
-# Download Kepler data și încarcă în tab "Upload CSV"
-# Aplicația detectează automat formatul KOI
-# Primești predicții pentru CONFIRMED/CANDIDATE/FALSE POSITIVE
+# Download Kepler data and upload in "Upload CSV" tab
+# Application automatically detects KOI format
+# Get predictions for CONFIRMED/CANDIDATE/FALSE POSITIVE
 ```
 
-**🚀 Analiză date TESS TOI:**
+**🚀 TESS TOI data analysis:**
 ```bash
-# Folosește modelul multi_toi_classifier.joblib pentru specializare TOI
-# Mapare automată a coloanelor tfopwg_*
-# Rezultate optimizate pentru obiectele de interes TESS
+# Use multi_toi_classifier.joblib for TOI specialization
+# Automatic mapping of tfopwg_* columns
+# Results optimized for TESS Objects of Interest
 ```
 
-**🔬 Antrenare model custom:**
+**🔬 Custom model training:**
 ```bash
-# Combină date din surse multiple (Kepler + K2 + TOI)
-# Configurează hyperparameters în tab Retrain
-# Exportă și folosește noul model automat
+# Combine data from multiple sources (Kepler + K2 + TOI)
+# Configure hyperparameters in Retrain tab
+# Export and use new model automatically
 ```
 
-### 📊 Date de Test Incluse
+### 📊 Included Test Data
 
-Aplicația vine cu exemple de date în directorul `data/`:
-- **`cumulative_*.csv`** - Date Kepler KOI pentru testare
-- **`k2pandc_*.csv`** - Date K2 și PANDC pentru validare
-- **`TOI_*.csv`** - Date TESS Objects of Interest
+The application comes with example data in the `data/` directory:
+- **`cumulative_*.csv`** - Kepler KOI data for testing
+- **`k2pandc_*.csv`** - K2 and PANDC data for validation
+- **`TOI_*.csv`** - TESS Objects of Interest data
 
-### 🎯 Cazuri de Utilizare
+### 🎯 Use Cases
 
-**🔬 Cercetători:**
-- Analiză rapidă a datelor astronomice noi
-- Validarea rezultatelor cu modele multiple
-- Explorarea importanței caracteristicilor
+**🔬 Researchers:**
+- Quick analysis of new astronomical data
+- Validation of results with multiple models
+- Exploration of feature importance
 
-**🎓 Studenți:**
-- Învățarea conceptelor de machine learning astronomic
-- Experimentarea cu algoritmi diferiți
-- Înțelegerea feature engineering-ului
+**🎓 Students:**
+- Learning astronomical machine learning concepts
+- Experimenting with different algorithms
+- Understanding feature engineering
 
-**🏢 Dezvoltatori:**
-- Integrarea modelelor în aplicații mai mari
-- Prototiparea rapidă de soluții ML
-- Benchmark-ing pe date astronomice
+**🏢 Developers:**
+- Integrating models into larger applications
+- Rapid prototyping of ML solutions
+- Benchmarking on astronomical data
 
 ### 🔧 API Reference
 
-**Principais funcții publice:**
+**Main public functions:**
 
 ```python
-# Din src.model
+# From src.model
 load_model(model_path) -> tuple[pipeline, encoder, features]
 train_unified_model(**kwargs) -> dict[results]
 
-# Din src.data  
+# From src.data  
 map_any_to_internal(df) -> pd.DataFrame
 robust_read_csv(file) -> pd.DataFrame
 
-# Din src.explain
+# From src.explain
 calculate_feature_importance(model, X) -> dict
 generate_shap_explanations(model, X) -> shap.Explanation
 ```
 
-## 🤝 Contribuții
+## 🤝 Contributions
 
-Contribuțiile sunt binevenite! 
+Contributions are welcome! 
 
-1. Fork repository-ul
-2. Creează o branch pentru feature-ul tău
-3. Commit modificările
-4. Push la branch
-5. Deschide un Pull Request
+1. Fork the repository
+2. Create a branch for your feature
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
 
-## 📄 Licență
+## 📄 License
 
-Acest proiect este sub licența MIT. Vezi fișierul `LICENSE` pentru detalii.
+This project is under the MIT license. See the `LICENSE` file for details.
 
-## 🆘 Suport și Troubleshooting
+## 🆘 Support and Troubleshooting
 
-### ❓ Probleme Comune și Soluții
+### ❓ Common Issues and Solutions
 
-**🔴 Problema: Modelul nu se încarcă**
+**🔴 Issue: Model doesn't load**
 ```
 ❌ Failed to load model: [Errno 2] No such file or directory
 ```
-**✅ Soluții:**
-- Verifică că directorul `models/` există și conține fișiere .joblib
-- În cloud deployment, asigură-te că `models/` este inclus în build
-- Verifică permisiunile de citire pe fișierele model
-- Încearcă să selectezi alt model din dropdown
+**✅ Solutions:**
+- Check that `models/` directory exists and contains .joblib files
+- In cloud deployment, make sure `models/` is included in build
+- Check read permissions on model files
+- Try selecting another model from dropdown
 
-**🔴 Problema: Antrenarea eșuează**
+**🔴 Issue: Training fails**
 ```
 ❌ Training failed: KeyError: 'target_column'
 ```
-**✅ Soluții:**
-- Verifică că CSV-ul conține o coloană cu etichete (disposition, koi_disposition, etc.)
-- Asigură-te că valorile sunt CONFIRMED/CANDIDATE/FALSE POSITIVE
-- Verifică că nu există valori NaN în coloana target
-- Folosește formatele de date suportate
+**✅ Solutions:**
+- Check that CSV contains a label column (disposition, koi_disposition, etc.)
+- Make sure values are CONFIRMED/CANDIDATE/FALSE POSITIVE
+- Check that there are no NaN values in target column
+- Use supported data formats
 
-**🔴 Problema: CSV nu se încarcă**
+**🔴 Issue: CSV doesn't load**
 ```
 ❌ Error reading CSV file: UnicodeDecodeError
 ```
-**✅ Soluții:**
-- Salvează CSV-ul cu encoding UTF-8
-- Elimină caracterele speciale din header-e
-- Verifică că fișierul nu este corupt
-- Încearcă să elimini liniile cu comentarii (#)
+**✅ Solutions:**
+- Save CSV with UTF-8 encoding
+- Remove special characters from headers
+- Check that file is not corrupted
+- Try removing comment lines (#)
 
-**🔴 Problema: Predicțiile sunt toate identice**
+**🔴 Issue: All predictions are identical**
 ```
 ❌ All predictions are the same class
 ```
-**✅ Soluții:**
-- Verifică că datele de input sunt variate și realiste
-- Ajustează threshold-ul în tab "Threshold Explorer"
-- Verifică că features-urile sunt mapped corect
-- Încearcă un model diferit
+**✅ Solutions:**
+- Check that input data is varied and realistic
+- Adjust threshold in "Threshold Explorer" tab
+- Verify that features are mapped correctly
+- Try a different model
 
-**🔴 Problema: Memory errors la fișiere mari**
+**🔴 Issue: Memory errors with large files**
 ```
 ❌ MemoryError: Unable to allocate array
 ```
-**✅ Soluții:**
-- Împarte fișierul CSV în bucăți mai mici
-- Folosește sample-uri mai mici pentru antrenare
-- Crește memoria disponibilă pentru aplicație
-- Elimină coloanele nefolosite din CSV
+**✅ Solutions:**
+- Split CSV file into smaller chunks
+- Use smaller samples for training
+- Increase available memory for application
+- Remove unused columns from CSV
 
-### 🔧 Debugging și Logs
+### 🔧 Debugging and Logs
 
-**Activează debugging în Streamlit:**
+**Enable debugging in Streamlit:**
 ```bash
-# Rulează cu logging verbose
+# Run with verbose logging
 streamlit run app/streamlit_app.py --logger.level=debug
 ```
 
-**Verifică loading-ul modelelor:**
+**Check model loading:**
 ```python
-# În Python console
+# In Python console
 import joblib
 from pathlib import Path
 
@@ -648,142 +648,142 @@ except Exception as e:
     print(f"Loading failed: {e}")
 ```
 
-### 📞 Contact și Suport
+### 📞 Contact and Support
 
-**Pentru întrebări sau probleme:**
+**For questions or issues:**
 
 🐛 **Bug Reports:**
-- Deschide un issue pe [GitHub Repository](https://github.com/e-andrei/Nasa_Space_APPs_Atomic_Bots)
-- Include: versiunea Python, OS, error message complet, steps to reproduce
+- Open an issue on [GitHub Repository](https://github.com/e-andrei/Nasa_Space_APPs_Atomic_Bots)
+- Include: Python version, OS, complete error message, steps to reproduce
 
 📖 **Feature Requests:**
-- Sugerează noi funcționalități în GitHub Issues
-- Descrie use case-ul și beneficiile
+- Suggest new features in GitHub Issues
+- Describe use case and benefits
 
-💬 **Întrebări generale:**
-- Consultă documentația din `DEPLOYMENT_GUIDE.md`
-- Verifică exemplele din `notebooks/quickstart_tutorial.ipynb`
-- Caută în Issues existente pe GitHub
+💬 **General Questions:**
+- Consult documentation in `DEPLOYMENT_GUIDE.md`
+- Check examples in `notebooks/quickstart_tutorial.ipynb`
+- Search existing Issues on GitHub
 
 ### 🎯 Performance Tips
 
-**Pentru fișiere mari:**
-- Folosește sample pentru explorare inițială
-- Antrenează pe subsets reprezentative
-- Monitorizează memoria folosită
+**For large files:**
+- Use samples for initial exploration
+- Train on representative subsets
+- Monitor memory usage
 
-**Pentru deployment cloud:**
-- Optimizează mărimea modelelor (.joblib files)
-- Folosește cache pentru modele frecvent accesate
-- Configurează timeout-uri adecvate
+**For cloud deployment:**
+- Optimize model sizes (.joblib files)
+- Use cache for frequently accessed models
+- Configure appropriate timeouts
 
-**Pentru development:**
-- Folosește environment virtual Python
-- Păstrează dependențele la zi
-- Testează pe date diverse înainte de deployment
-
----
-
-### 🏆 Performanță și Statistici
-
-**📊 Aplicația poate procesa:**
-- ✅ Fișiere CSV până la 100MB
-- ✅ Datasets cu 100,000+ samples  
-- ✅ Predicții batch de 10,000+ rows
-- ✅ Antrenare pe 500,000+ samples
-- ✅ 15+ formate diferite de coloane astronomice
-
-**⚡ Timp de răspuns:**
-- Predicții: < 2 secunde pentru 1000 samples
-- Model loading: < 5 secunde
-- Antrenare: 2-10 minute (depinde de dataset și tuning)
-- Feature importance: < 30 secunde
+**For development:**
+- Use Python virtual environment
+- Keep dependencies up to date
+- Test on diverse data before deployment
 
 ---
 
-## 🌟 Despre Acest Proiect
+### 🏆 Performance and Statistics
+
+**📊 The application can process:**
+- ✅ CSV files up to 100MB
+- ✅ Datasets with 100,000+ samples  
+- ✅ Batch predictions of 10,000+ rows
+- ✅ Training on 500,000+ samples
+- ✅ 15+ different astronomical column formats
+
+**⚡ Response time:**
+- Predictions: < 2 seconds for 1000 samples
+- Model loading: < 5 seconds
+- Training: 2-10 minutes (depends on dataset and tuning)
+- Feature importance: < 30 seconds
+
+---
+
+## 🌟 About This Project
 
 ### 🏆 NASA Space Apps Challenge 2025
 
-Această aplicație a fost dezvoltată pentru **NASA Space Apps Challenge 2025**, demonstrând capacități avansate de machine learning pentru clasificarea exoplanetelor.
+This application was developed for **NASA Space Apps Challenge 2025**, demonstrating advanced machine learning capabilities for exoplanet classification.
 
-**🎯 Obiectivul:** Crearea unei soluții complete, accesibile și robuste pentru clasificarea automată a candidaților exoplaneți din diferite misiuni astronomice.
+**🎯 Objective:** Create a complete, accessible, and robust solution for automatic classification of exoplanet candidates from different astronomical missions.
 
-**🚀 Inovația:** Prima aplicație care unifică formatele de date de la Kepler, K2, TESS și Exoplanet Archive într-o singură interfață inteligentă.
+**🚀 Innovation:** First application that unifies data formats from Kepler, K2, TESS, and Exoplanet Archive in a single intelligent interface.
 
 ### 👥 Team: Atomic Bots
 
-**🔬 Specializări:**
-- Machine Learning pentru Astronomie
-- Data Science și Feature Engineering  
-- Web Development și Deployment
-- Vizualizări Interactive și UX
+**🔬 Specializations:**
+- Machine Learning for Astronomy
+- Data Science and Feature Engineering  
+- Web Development and Deployment
+- Interactive Visualizations and UX
 
-### 🏅 Realizări Tehnice
+### 🏅 Technical Achievements
 
-**✨ Contribuții Originale:**
-- **Mapare automată multi-format** - Primul sistem care unifică automat toate formatele majore de date exoplaneți
-- **Feature engineering astronomic** - Calculare inteligentă a caracteristicilor lipsă din parametri disponibili
-- **Deployment cloud robust** - Soluție care funcționează identic local și în cloud
-- **Interfață all-in-one** - 7 module integrate pentru workflow complet de clasificare
+**✨ Original Contributions:**
+- **Automatic multi-format mapping** - First system to automatically unify all major exoplanet data formats
+- **Astronomical feature engineering** - Smart calculation of missing features from available parameters
+- **Robust cloud deployment** - Solution that works identically local and in cloud
+- **All-in-one interface** - 7 integrated modules for complete classification workflow
 
 **📈 Impact:**
-- Reduce timpul de clasificare de la ore la secunde
-- Democratizează accesul la ML astronomic avansat
-- Unifică ecosystem-ul fragmentat de date exoplaneți
-- Oferă transparență completă în procesul de clasificare
+- Reduces classification time from hours to seconds
+- Democratizes access to advanced astronomical ML
+- Unifies fragmented exoplanet data ecosystem
+- Provides complete transparency in classification process
 
-### 🔮 Viitorul Proiectului
+### 🔮 Project Future
 
 **🛠️ Roadmap 2025-2026:**
-- [ ] **Integrare JWST data** - Suport pentru date de la James Webb Space Telescope
-- [ ] **Real-time alerts** - Sistem de notificări pentru candidați noi
-- [ ] **Ensemble models** - Combinarea rezultatelor de la modele multiple
-- [ ] **API REST** - Serviciu programmatic pentru integrări externe
-- [ ] **Mobile app** - Versiune mobilă pentru astronomi în teren
+- [ ] **JWST data integration** - Support for James Webb Space Telescope data
+- [ ] **Real-time alerts** - Notification system for new candidates
+- [ ] **Ensemble models** - Combining results from multiple models
+- [ ] **REST API** - Programmatic service for external integrations
+- [ ] **Mobile app** - Mobile version for field astronomers
 
-**🌍 Colaborări Planificate:**
-- **ESA Missions** - Extindere pentru datele de la Plato și Cheops
-- **Amateur astronomers** - Interfață simplificată pentru observatorii amatori
-- **Educational institutions** - Module de teaching pentru universități
+**🌍 Planned Collaborations:**
+- **ESA Missions** - Extension for Plato and Cheops data
+- **Amateur astronomers** - Simplified interface for amateur observatories
+- **Educational institutions** - Teaching modules for universities
 
-### 🤝 Contribuții Comunitate
+### 🤝 Community Contributions
 
-**Contribuțiile sunt mai mult decât binevenite!**
+**Contributions are more than welcome!**
 
-**🔧 Tipuri de contribuții:**
-- 🐛 **Bug fixes** și îmbunătățiri de stabilitate
-- ✨ **Noi funcționalități** și module 
-- 📚 **Documentație** și tutoriale
-- 🎨 **UI/UX improvements** pentru usabilitate
+**🔧 Types of contributions:**
+- 🐛 **Bug fixes** and stability improvements
+- ✨ **New features** and modules 
+- 📚 **Documentation** and tutorials
+- 🎨 **UI/UX improvements** for usability
 - 🚀 **Performance optimizations**
-- 🧪 **Testing** și validare pe date noi
+- 🧪 **Testing** and validation on new data
 
-**📋 Process de contribuție:**
-1. **Fork** repository-ul
-2. **Creează** o branch pentru feature-ul tău (`feature/amazing-feature`)
-3. **Commit** modificările (`git commit -m 'Add amazing feature'`)
-4. **Push** la branch (`git push origin feature/amazing-feature`)
-5. **Deschide** un Pull Request cu descriere detaliată
+**📋 Contribution process:**
+1. **Fork** the repository
+2. **Create** a branch for your feature (`feature/amazing-feature`)
+3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
+4. **Push** to branch (`git push origin feature/amazing-feature`)
+5. **Open** a Pull Request with detailed description
 
-**🏷️ Labels pentru Issues:**
-- `enhancement` - Noi funcționalități
+**🏷️ Labels for Issues:**
+- `enhancement` - New features
 - `bug` - Bug reports
-- `documentation` - Îmbunătățiri documentație
-- `good-first-issue` - Perfect pentru începători
-- `help-wanted` - Contribuții căutate activ
+- `documentation` - Documentation improvements
+- `good-first-issue` - Perfect for beginners
+- `help-wanted` - Actively seeking contributions
 
-### 📄 Licență și Utilizare
+### 📄 License and Usage
 
-**📜 Licență MIT** - Vezi fișierul `LICENSE` pentru detalii complete.
+**📜 MIT License** - See `LICENSE` file for complete details.
 
-**✅ Poți folosi acest proiect pentru:**
-- Cercetare academică și publicații
-- Aplicații comerciale și startup-uri
-- Teaching și materiale educaționale
-- Modificări și redistribuire
+**✅ You can use this project for:**
+- Academic research and publications
+- Commercial applications and startups
+- Teaching and educational materials
+- Modifications and redistribution
 
-**🙏 Te rugăm să incluzi referință la:**
+**🙏 Please include reference to:**
 ```
 Exoplanet AI Classifier - NASA Space Apps Challenge 2025
 Team: Atomic Bots
@@ -792,8 +792,8 @@ Repository: https://github.com/e-andrei/Nasa_Space_APPs_Atomic_Bots
 
 ---
 
-**🌟 Clasifică exoplanetele cu încredere și precizie! 🌟**
+**🌟 Classify exoplanets with confidence and precision! 🌟**
 
 *"Bringing the universe closer, one exoplanet at a time."*
 
-**Dezvoltat cu ❤️ pentru NASA Space Apps Challenge 2025 • Team Atomic Bots**
+**Developed with ❤️ for NASA Space Apps Challenge 2025 • Team Atomic Bots**
