@@ -2,6 +2,8 @@
 
 **Advanced web application for exoplanet classification with support for multiple astronomical data formats - all in an integrated Streamlit interface!**
 
+[Try the cloud demo here] (https://nasaspaceappsatomicbots-kcneoanytcwyqpgbwmbeq5.streamlit.app/)
+
 ## ✨ Main Features
 
 ### 🎯 Advanced Multi-Format Classifier
