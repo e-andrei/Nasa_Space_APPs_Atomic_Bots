@@ -1,0 +1,212 @@
+{
+  "training_results": {
+    "method": "simple_training",
+    "train_metrics": {
+      "classification_report": {
+        "CANDIDATE": {
+          "precision": 0.7200476514635806,
+          "recall": 0.93224633689545,
+          "f1-score": 0.8125210043689087,
+          "support": 9077.0
+        },
+        "CONFIRMED": {
+          "precision": 0.9271669897535308,
+          "recall": 0.5857242827151854,
+          "f1-score": 0.717915728530074,
+          "support": 5716.0
+        },
+        "FALSE POSITIVE": {
+          "precision": 0.9309109518935517,
+          "recall": 0.8490742181422125,
+          "f1-score": 0.8881113190658312,
+          "support": 6427.0
+        },
+        "REFUTED": {
+          "precision": 1.0,
+          "recall": 0.7727272727272727,
+          "f1-score": 0.8717948717948718,
+          "support": 22.0
+        },
+        "accuracy": 0.8136710290933057,
+        "macro avg": {
+          "precision": 0.8945313982776657,
+          "recall": 0.7849430276200302,
+          "f1-score": 0.8225857309399215,
+          "support": 21242.0
+        },
+        "weighted avg": {
+          "precision": 0.8398702444960908,
+          "recall": 0.8136710290933057,
+          "f1-score": 0.8099957817413648,
+          "support": 21242.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          8462,
+          255,
+          360,
+          0
+        ],
+        [
+          2324,
+          3348,
+          44,
+          0
+        ],
+        [
+          963,
+          7,
+          5457,
+          0
+        ],
+        [
+          3,
+          1,
+          1,
+          17
+        ]
+      ],
+      "classes": [
+        "CANDIDATE",
+        "CONFIRMED",
+        "FALSE POSITIVE",
+        "REFUTED"
+      ],
+      "accuracy": 0.8136710290933057,
+      "macro_f1": 0.8225857309399215,
+      "weighted_f1": 0.8099957817413648,
+      "roc_auc_ovr": 0.9636140817510161,
+      "macro_average_precision": 0.9239382733304196
+    },
+    "bias_factors": {
+      "CANDIDATE": 1.0,
+      "CONFIRMED": 0.7,
+      "FALSE POSITIVE": 1.25,
+      "REFUTED": 1.1
+    }
+  },
+  "eval_metrics": {
+    "classification_report": {
+      "CANDIDATE": {
+        "precision": 0.7200476514635806,
+        "recall": 0.93224633689545,
+        "f1-score": 0.8125210043689087,
+        "support": 9077.0
+      },
+      "CONFIRMED": {
+        "precision": 0.9271669897535308,
+        "recall": 0.5857242827151854,
+        "f1-score": 0.717915728530074,
+        "support": 5716.0
+      },
+      "FALSE POSITIVE": {
+        "precision": 0.9309109518935517,
+        "recall": 0.8490742181422125,
+        "f1-score": 0.8881113190658312,
+        "support": 6427.0
+      },
+      "REFUTED": {
+        "precision": 1.0,
+        "recall": 0.7727272727272727,
+        "f1-score": 0.8717948717948718,
+        "support": 22.0
+      },
+      "accuracy": 0.8136710290933057,
+      "macro avg": {
+        "precision": 0.8945313982776657,
+        "recall": 0.7849430276200302,
+        "f1-score": 0.8225857309399215,
+        "support": 21242.0
+      },
+      "weighted avg": {
+        "precision": 0.8398702444960908,
+        "recall": 0.8136710290933057,
+        "f1-score": 0.8099957817413648,
+        "support": 21242.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        8462,
+        255,
+        360,
+        0
+      ],
+      [
+        2324,
+        3348,
+        44,
+        0
+      ],
+      [
+        963,
+        7,
+        5457,
+        0
+      ],
+      [
+        3,
+        1,
+        1,
+        17
+      ]
+    ],
+    "classes": [
+      "CANDIDATE",
+      "CONFIRMED",
+      "FALSE POSITIVE",
+      "REFUTED"
+    ],
+    "accuracy": 0.8136710290933057,
+    "macro_f1": 0.8225857309399215,
+    "weighted_f1": 0.8099957817413648,
+    "roc_auc_ovr": 0.9636140817510161,
+    "macro_average_precision": 0.9239382733304196
+  },
+  "data_paths": [
+    "date/cumulative_2025.10.03_23.13.19.csv",
+    "date/k2pandc_2025.10.03_23.45.46.csv",
+    "date/TOI_2025.10.04_00.04.19.csv"
+  ],
+  "n_datasets": 3,
+  "n_samples": 21242,
+  "n_features": 16,
+  "features": [
+    "impact_parameter",
+    "fp_flag_ephemeris_match",
+    "fp_flag_stellar_eclipse",
+    "stellar_radius",
+    "disposition_score",
+    "equilibrium_temp",
+    "planet_radius",
+    "snr",
+    "transit_duration",
+    "fp_flag_not_transit",
+    "stellar_insolation",
+    "stellar_teff",
+    "orbital_period",
+    "fp_flag_centroid_offset",
+    "stellar_logg",
+    "transit_depth"
+  ],
+  "classes": {
+    "CANDIDATE": 9077,
+    "FALSE POSITIVE": 6427,
+    "CONFIRMED": 5716,
+    "REFUTED": 22
+  },
+  "model_type": "xgboost",
+  "weights": {
+    "confirmed": 0.7,
+    "false_positive": 1.25,
+    "candidate": 1.0,
+    "other": 1.1
+  },
+  "training_config": {
+    "tune_params": false,
+    "cv_folds": 5,
+    "n_iter": 20,
+    "random_state": 42
+  }
+}
